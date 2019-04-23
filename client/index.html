@@ -63,12 +63,28 @@
     <script>
         
         let negociacaoController = new NegociacaoController();
-        
+        /* convertendo dataString em array
+        let dataString = "17-04-2016"
+        console.log(dataString)
+
+        dataString = dataString.split('-').reverse().join('/');//split separa cada elemento por '-' criando um array //reverse() muda a ordem do array//join() separa cada item do array por '/'
+        console.log(dataString)
+
+        data = new Date(dataString);//cria um objeto data passando o datastring
+        console.log(data)*/
+
         /*
         var hoje = new Date()
         var n1 = new Negociacao(hoje, 5, 200);
         hoje.setDate(11);
         console.log(n1.data)*/
+
+        let lista1 = ['banana', 'laranja', 'mamão'];
+        let lista2 = ['caju', 'tangerina', 'abacaxi', 'canela', 'salada mista'];
+
+        lista1.push(...lista2);//...faz com que a lista 1 receba a lista 2 como items do array(parametros)
+        console.log(lista1)
+        
 
     </script>
 </body>
