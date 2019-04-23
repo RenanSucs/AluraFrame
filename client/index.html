@@ -83,9 +83,40 @@
         let lista2 = ['caju', 'tangerina', 'abacaxi', 'canela', 'salada mista'];
 
         lista1.push(...lista2);//...faz com que a lista 1 receba a lista 2 como items do array(parametros)
-        console.log(lista1)
-        
+        /* multiplica por 2 apenas numeros impares
+        let numeros = [3,2,11,20,8,7];
+        let novosNumeros = [];
 
+        numeros.forEach(function(item){
+            if(item % 2){
+                novosNumeros.push(item*2);
+            }else{
+                novosNumeros.push(item);
+            }
+        });
+
+        OU
+
+        console.log(novosNumeros)
+
+        let numeros = [3,2,11,20,8,7];
+        let novosNumeros = numeros.map(function(item){
+            item = (item%2 + 1) * item;
+            return item;
+        });
+
+        console.log(novosNumeros)*/
+
+        /* USO DO SPREAD
+         function somaDoisNumeros(numero1, numero2) {
+        return numero1 + numero2;                                            
+        }
+
+        let numeros = [10,30];
+        console.log(somaDoisNumeros(...numeros)); passo o array com spread para ele separar por parametros e executar o calculo
+
+        */
+       
     </script>
 </body>
 </html>
