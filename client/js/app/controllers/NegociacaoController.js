@@ -27,6 +27,21 @@ class NegociacaoController{
             this._inputQuantidade.value,
             this._inputValor.value
         );
+        console.log(negociacao)
+        this.limpaCampos();
     };
 
+    limpaCampos(){
+        this._inputData.value = "";
+        this._inputQuantidade.value = "";
+        this._inputValor.value = "";
+
+        this._inputData.focus();
+    }
+
 }
+
+
+
+
+    
