@@ -27,7 +27,12 @@ class NegociacaoController{
             this._inputQuantidade.value,
             this._inputValor.value
         );
-        console.log(negociacao)
+        
+        let diaMesAno = negociacao.data.getDate()
+        +'/'+(negociacao.data.getMonth() + 1) //getMonth retorna o mes -1, por isso precisamos faz a adição
+        +'/'+negociacao.data.getFullYear();
+        console.log(diaMesAno);
+
         this.limpaCampos();
     };
 
