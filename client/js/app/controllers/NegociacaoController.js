@@ -13,7 +13,7 @@ class NegociacaoController{
         event.preventDefault(event);
 
         let negociacao = new Negociacao(
-            DateHelper.textParaData(this._inputData.value),
+            DateHelper.textoParaData(this._inputData.value),
             this._inputQuantidade.value,
             this._inputValor.value
         );
@@ -26,8 +26,8 @@ class NegociacaoController{
 
     limpaCampos(){
         this._inputData.value = "";
-        this._inputQuantidade.value = "";
-        this._inputValor.value = "";
+        this._inputQuantidade.value = 1;
+        this._inputValor.value = 0.0;
 
         this._inputData.focus();
     }
