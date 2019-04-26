@@ -7,24 +7,25 @@ class NegociacaoController{
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
+        this._listaNegociacoes = new ListaNegociacoes();
     }
 
     adiciona(event){
         event.preventDefault(event);
-
-        let negociacao = new Negociacao(
+        
+        this._listaNegociacoes.adiciona(this._criaNegociacao());
+        this._limpaCampos();
+        console.log(this._listaNegociacoes)
+    };
+    _criaNegociacao(){
+        return new Negociacao(
             DateHelper.textoParaData(this._inputData.value),
             this._inputQuantidade.value,
             this._inputValor.value
         );
-        console.log(negociacao);
+    }
 
-        console.log(DateHelper.dataParaTexto(negociacao.data));
-        
-        this.limpaCampos();
-    };
-
-    limpaCampos(){
+    _limpaCampos(){//underline só pode chamar método pelo negociacao contorller, apenas por essa classe
         this._inputData.value = "";
         this._inputQuantidade.value = 1;
         this._inputValor.value = 0.0;
