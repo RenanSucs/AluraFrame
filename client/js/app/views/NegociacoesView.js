@@ -19,7 +19,7 @@ class NegociacoesView{
             </thead>
         
             <tbody>
-                ${model.negociacoes.map(n => {
+                ${model.negociacoes.map(n => {//.map varre cada negociacao e cria o template string abaixo
 
                     return `
                         <tr>
@@ -33,6 +33,13 @@ class NegociacoesView{
             </tbody>
         
             <tfoot>
+                <td colspan="3">Total</td>
+                <td>${
+                        model.negociacoes.reduce(function(total, n){//reduce retorna apenas um valor do array
+                            return total + n.volume;
+                        }, 0)
+                }
+                </td>
             </tfoot>
         </table>
         `;
