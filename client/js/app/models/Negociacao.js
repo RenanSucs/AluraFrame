@@ -1,5 +1,7 @@
 class Negociacao{
+    
     constructor(data, quantidade, valor){//underline permite apenas que os metodos da classe modifiquem o objeto, ninguem de fora consegue
+        
         this._data = new Date(data.getTime());//cria uma nova data para que esse valor nao seja alterado
         this._quantidade = quantidade;
         this._valor = valor;
@@ -7,18 +9,22 @@ class Negociacao{
     };
 
     get volume(){//utilizamos o get para que o método seja chamado em forma de propriedade. Exemplo: n1.volume/n1.quantidade - sempre vão referenciar o método criado aqui
+       
         return this._quantidade * this._valor;
     };
 
     get data(){
+        
         return new Date(this._data.getTime());//cria uma nova data para que esse valor nao seja alterado
     };
 
     get quantidade(){
+        
         return this._quantidade;
     };
 
     get valor(){
+        
         return this._valor;
     };
 }
