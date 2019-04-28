@@ -39,6 +39,10 @@ class NegociacaoController{
         );
     }
 
+    apaga(){
+        
+    }
+
     _limpaCampos(){//underline só pode chamar método pelo negociacao contorller, apenas por essa classe
         
         this._inputData.value = "";
